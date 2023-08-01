@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3 id="Highest">Highest marks</h3>
+    <input id="first" type="number" placeholder="1st student marks" />
+    <br />
+    <input id="second" type="number" placeholder="1st student marks" />
+    <br />
+    <input id="third" type="number" placeholder="1st student marks" />
+    <br />
+    <input id="fourth" type="number" placeholder="1st student marks" />
+    <br />
+    <input id="fifth" type="number" placeholder="1st student marks" />
+    <br />
+    <button>Submit</button>
+    <!-- css section -->
+    <style>
+      body {
+        line-height: 4vh;
+        margin: 30px 30px;
+      }
+      button {
+        height: 35px;
+        width: 80px;
+        border-radius: 15px;
+        background-color: aqua;
+        margin-left: 30px;
+      }
+    </style>
+    <!-- Javascript section -->
+    <script>
+      // if you want to access the value here it will be empty as initial.
+      let marks1 = document.getElementById("first");
+      let marks2 = document.getElementById("second");
+      let marks3 = document.getElementById("third");
+      let marks4 = document.getElementById("fourth");
+      let marks5 = document.getElementById("fifth");
+
+      let highestMarks = 0;
+
+      console.log(highestMarks);
+
+      document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", () => {
+          let arr = [marks1, marks2, marks3, marks4, marks5];
+          for (let i = 0; i < arr.length; i++) {
+            // covert to parseInt because if both side is string then they match accorfing to the disctionary alphabatic order.
+            if (parseInt(arr[i].value) > highestMarks) {
+              highestMarks = parseInt(arr[i].value);
+            }
+          }
+          console.log(highestMarks);
+          document.getElementById("Highest").innerHTML = highestMarks;
+        });
+    </script>
+  </body>
+</html>
