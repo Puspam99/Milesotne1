@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+<body>
+    <form>
+        <label for="text"> Name:</label>
+        <input type="text" id="Name">
+        <br>
+        <br>
+        <h3>Total count vovel : <span id="vovel">0</span></h3>
+        <br>
+        <br>
+        <button id="submit" type="submit">Submit</button>
+        
+    </form>
+
+    <!-- style -->
+    <style>
+          *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-align: center;
+
+}
+body{
+    background-color: pink;
+}
+form{
+    background-color: greenyellow;
+    display: inline-block;
+    margin-top: 250px;
+    border:solid black;
+    height: 140px;
+    width: 400px;
+    padding-top: 30px;
+}
+input{
+    background-color: transparent;
+
+}
+        </style>
+
+<!-- Script -->
+<script>
+
+
+
+ function letter(){
+    event.preventDefault();
+let nam = document.getElementById("Name").value;
+let count= 0;
+for (let i=0; i<nam.length; i++){
+if(nam[i] === 'a' || nam[i] === 'e' || nam[i] === 'i' || nam[i] === 'o' || nam[i] === 'u'){
+    count++
+};
+}
+document.getElementById("vovel").innerText = count
+}
+document.getElementsByTagName("button")[0]
+.addEventListener("click", letter);
+
+</script>
+    
+</body>
+
+</html>
+
+
+
+
+
+
