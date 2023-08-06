@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    padding: 0px;
+     box-sizing: border-box;
+     background-color: black;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    margin-top: 34px;
+}
+button{
+    height: 50px;
+    width: 120px;
+    font-size: 15px;
+    font-weight: 700;
+    background-color: antiquewhite;
+    border-radius: 15px;
+    cursor: pointer;
+
+}
+
+p{
+    width: 160vh;
+    color: rgb(179, 152, 152);
+    font-size: 25px;
+        
+}
+.para{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
